@@ -242,8 +242,4 @@ button:hover {
     width: 40px;
     height: 40px;
   }
-
-  .sun-parent {
-    transform: scale(0.8);
-  }
 }
