@@ -9,7 +9,7 @@ function App() {
     <div data-theme={theme} className="app">
       <div className="app-content">
       <Nav theme={theme} setTheme={setTheme}/>
-      <Header/>
+      <Header theme={theme}/>
       <About/>
       </div>
     </div>

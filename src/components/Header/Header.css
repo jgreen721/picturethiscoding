@@ -15,7 +15,7 @@
   position: absolute;
   inset: 0;
   opacity: 50%;
-  width: 200px;
+  /* width: 200px; */
   /* border: 2px solid red; */
 }
 
@@ -42,7 +42,7 @@
   /* height: 95%; */
   /* height: 200px; */
   /* width: 50px; */
-  aspect-ratio: 3/2;
+  aspect-ratio: 4/2;
   border-bottom-right-radius: 25%;
   box-shadow: 0px 0px 0px var(--cyan);
   transform: translateX(-100%);
@@ -192,8 +192,8 @@ div h5 {
 
   .header-img-div img {
     height: 325px;
-    width: 100%;
     aspect-ratio: unset;
+    width: 95%;
   }
   .header-text-content h1 {
     font-size: 3.25rem;
