@@ -191,7 +191,8 @@ div h5 {
   }
 
   .header-img-div img {
-    height: 275px;
+    height: 325px;
+    width: 100%;
   }
   .header-text-content h1 {
     font-size: 3.25rem;
