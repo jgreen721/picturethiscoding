@@ -1,0 +1,11 @@
+.about-me-title {
+  color: white;
+  display: flex;
+  gap: 1rem;
+}
+
+.about-me-h1 {
+  font-weight: 200;
+  background: var(--teal);
+  border-radius: 0.25rem;
+}

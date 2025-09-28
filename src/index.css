@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --codeFont: "Source Code Pro", monospace;
+  --mainFont: "Montserrat", sans-serif;
+  --white: rgb(235, 235, 235);
+  --black: rgb(20, 20, 20);
+  --cyan: cyan;
+  --teal: teal;
+}
+
+.bold {
+  font-weight: 700;
+}

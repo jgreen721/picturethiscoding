@@ -1,0 +1,235 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 85rem;
+  /* padding: 0rem 2.5rem; */
+  padding: 2.5rem;
+  z-index: 5;
+  transform: translateY(-20rem);
+  animation: lowermenu 1s 1s forwards;
+}
+
+@keyframes lowermenu {
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(5px);
+  z-index: -1;
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.nav-logo {
+  position: relative;
+  height: 55px;
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.light {
+  width: 60%;
+  height: 20px;
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  top: -17.5px;
+  box-shadow: 0px 0px 0px var(--white), 0px 0px 0px var(--white),
+    0px 0px 0px var(--white);
+  animation: turnonlight 1s 1.75s forwards;
+}
+
+@keyframes turnonlight {
+  100% {
+    box-shadow: 0px 5px 2px var(--white), 0px 5px 7.5px var(--white),
+      0px 12.5px 15px var(--white);
+  }
+}
+
+.nav-logo h1 {
+  font-size: 3rem;
+  font-family: var(--codeFont);
+  color: var(--black);
+}
+
+.nav-logo h1:nth-child(2) {
+  transform: translateX(-0.25rem) translateY(0rem);
+  animation: lightupletter1 1s 1s forwards;
+}
+
+@keyframes lightupletter1 {
+  100% {
+    color: var(--white);
+  }
+}
+
+.nav-logo h1:nth-child(3) {
+  position: absolute;
+  transform: translateX(0.5rem) translateY(0.5rem);
+  animation: lightupletter2 1s 1s forwards;
+}
+
+@keyframes lightupletter2 {
+  100% {
+    color: var(--teal);
+  }
+}
+
+button {
+  position: relative;
+  background: transparent;
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px var(--teal);
+  box-shadow: 0px 5px 5px var(--teal);
+  border-radius: 50%;
+  transition: 0.25s ease;
+  overflow: hidden;
+}
+
+button:hover {
+  box-shadow: 0px 2px 2px var(--teal);
+}
+
+.btn-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moon-parent {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--black);
+}
+
+.moon-icon {
+  width: 20.5px;
+  height: 20.5px;
+  background: var(--white);
+  border-radius: 50%;
+  position: relative;
+}
+
+.moon-icon::after {
+  content: "";
+  width: 15.5px;
+  height: 20.5px;
+  background: var(--black);
+  position: absolute;
+  border-radius: 50%;
+  right: -1px;
+  top: 0;
+}
+
+.animate-theme {
+  animation: spinintro 1s forwards;
+  transform: scale(0) rotate(1080deg);
+}
+
+@keyframes spinintro {
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.star {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: var(--white);
+  position: absolute;
+  opacity: 65%;
+  transform: translateZ(100px);
+  /* animation: shootingstar 10s ease-in infinite; */
+}
+
+@keyframes shootingstar {
+  100% {
+    transform: translateX(150px) translateY(-25px);
+  }
+}
+
+.star-1 {
+  top: 15%;
+  left: 75%;
+}
+
+.star-2 {
+  top: 55%;
+  left: 65%;
+}
+
+.star-3 {
+  top: 78.5%;
+  left: 12.5%;
+}
+
+.sun-parent {
+  position: absolute;
+  inset: 0;
+  /* border: 2px solid blue; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.85);
+  transition: 0.5s ease;
+}
+
+.hide-icon {
+  transform: scale(0);
+}
+
+.sun {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  /* background: white; */
+  border: 2.5px solid var(--white);
+}
+
+.ray {
+  position: absolute;
+  inset: 0;
+  /* border: 2px solid white; */
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  transform: rotate(var(--rotate));
+}
+
+.ray::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 2px;
+  background: var(--white);
+  transform: translateY(0.45rem);
+}

@@ -1,0 +1,27 @@
+.app[data-theme="dark"] {
+  --mainBg: radial-gradient(rgb(25, 25, 25), rgb(5, 5, 5));
+  --mainColor: var(--white);
+  --mainSolidBg: var(--black);
+}
+.app[data-theme="light"] {
+  --mainBg: radial-gradient(rgb(205, 205, 205), rgb(155, 155, 155));
+  --mainColor: var(--black);
+  --mainSolidBg: var(--white);
+}
+
+.app {
+  background: var(--mainBg);
+  color: var(--mainColor);
+  font-family: var(--mainFont);
+  /* border: 2px solid red; */
+}
+
+.app-content {
+  max-width: 85rem;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+  padding-top: 5rem;
+
+  /* border: 2px solid white; */
+}

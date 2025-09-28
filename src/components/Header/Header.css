@@ -1,0 +1,218 @@
+.header {
+  height: 500px;
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  /* border: 2px solid black; */
+}
+
+.header-img-div {
+  position: absolute;
+  inset: 0;
+  opacity: 50%;
+  /* mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.35) 10%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0.35) 90%,
+    rgba(0, 0, 0, 1) 100%
+  ); */
+  /* border: 2px solid red; */
+}
+
+.mask-img {
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.35) 10%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0.35) 90%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.header-img-div::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(1.25px);
+}
+
+.header-img-div img {
+  height: 400px;
+  height: 95%;
+  aspect-ratio: 3/2;
+  border-bottom-right-radius: 25%;
+  box-shadow: 0px 0px 0px var(--cyan);
+  transform: translateX(-100%);
+  animation: translateimg 1s 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards,
+    highlightimg 1s 3.5s forwards;
+}
+
+@keyframes translateimg {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes highlightimg {
+  100% {
+    box-shadow: 0px 2px 2px var(--cyan);
+  }
+}
+
+.header-main-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.header-text-content {
+  text-align: center;
+  width: 0px;
+  overflow: hidden;
+  animation: animateheader 1.25s 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    forwards;
+  height: 235px;
+  position: relative;
+  /* border: 3px solid orange; */
+}
+
+@keyframes animateheader {
+  100% {
+    width: 375px;
+  }
+}
+
+.header-text-content h1 {
+  font-size: 5.5rem;
+  text-transform: uppercase;
+  font-family: var(--codeFont);
+  margin: -1rem 0;
+  transform: scaleY(3) translateY(1rem);
+  position: relative;
+  text-shadow: 0px 0px 0px var(--cyan);
+  animation: illuminatetextshadow 1.2s 3.25s forwards;
+}
+
+@keyframes illuminatetextshadow {
+  100% {
+    color: var(--mainSolidBg);
+    /* color: var(--black); */
+    text-shadow: 0px 0px 2px var(--cyan), 0px 0px 7.5px var(--cyan);
+  }
+}
+
+.captions-div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.tag-div {
+  font-size: 6rem;
+  text-shadow: 0px 0px 0px var(--cyan);
+  transform: translateY(-25rem) scaleY(1.45);
+  animation: lowertag 1.25s 0.25s forwards,
+    illuminatetextshadow 1.2s 3.25s forwards;
+}
+
+.tag-div:nth-child(3) {
+  transform: translateY(-30rem);
+  animation: lowertag 1.5s 0.75s forwards,
+    illuminatetextshadow 1.2s 3.25s forwards;
+}
+
+@keyframes lowertag {
+  100% {
+    transform: translateY(0rem) scaleY(1.45);
+  }
+}
+.this-div {
+  width: 100%;
+  overflow: hidden;
+  /* border: 2px solid orange; */
+}
+
+.this-div h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-transform: uppercase;
+  transform: translateY(-10rem);
+  animation: lowertext 1s 3s forwards;
+  color: var(--teal);
+  text-shadow: 0px 0px 2px var(--white);
+}
+
+@keyframes lowertext {
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+h3 span {
+  display: block;
+  position: relative;
+}
+
+div h5 {
+  width: 100%;
+  letter-spacing: 0.5rem;
+  font-weight: 200;
+  /* border: 2px solid green; */
+}
+
+.header-caption {
+  animation: scalecaption 1s 3.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    forwards;
+  filter: blur(50px);
+}
+
+@keyframes scalecaption {
+  100% {
+    filter: blur(0px);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    height: 375px;
+  }
+  .header-text-content {
+    height: 200px;
+    /* border: 2px solid green; */
+  }
+  .header-main-content {
+    gap: 0rem;
+  }
+
+  .header-img-div img {
+    height: 95%;
+  }
+  .header-text-content h1 {
+    font-size: 3.25rem;
+    margin: 0;
+    transform: scaleY(2) translateY(2rem);
+    /* text-shadow: 0px 0px 2px var(--teal); */
+    /* border: 2px solid red; */
+  }
+
+  .tag-div {
+    font-size: 3.5rem;
+  }
+
+  @keyframes animateheader {
+    100% {
+      width: 250px;
+    }
+  }
+}
