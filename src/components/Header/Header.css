@@ -193,6 +193,7 @@ div h5 {
   .header-img-div img {
     height: 325px;
     width: 100%;
+    aspect-ratio: unset;
   }
   .header-text-content h1 {
     font-size: 3.25rem;
